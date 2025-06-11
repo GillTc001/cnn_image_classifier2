@@ -1,8 +1,11 @@
 import streamlit as st
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
-from keras.preprocessing import image
+#from keras.models import Sequential
+#from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+#from keras.preprocessing import image
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.preprocessing import image
 from PIL import Image
 
 class_names = ['airplane', 'car', 'bird', 'cat', 'deer',
