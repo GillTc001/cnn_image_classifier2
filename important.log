@@ -1,0 +1,91 @@
+ Projektstruktur
+bash
+Kopieren
+Bearbeiten
+cnn-image-classifier/
+├── data/                   # Optional: für manuelle Daten
+├── notebooks/
+│   └── exploration.ipynb   # Explorative Datenanalyse
+├── src/
+│   ├── (1)model.py            # CNN-Architektur
+│   ├── (2)train.py            # Trainingsroutine
+│   ├── (3)evaluate.py         # Evaluation & Metriken
+│   └── (4)dataloader.py       # Daten vorbereiten & laden
+├── utils/
+│   └── helpers.py          # z. B. Plot-Funktionen
+├── (5)main.py                 # Einstiegspunkt
+├── (6)requirements.txt
+└── README.md
+
+Testing:
+1. Installer les dépendances
+Avant tout, assure-toi d’avoir Python (3.8+ recommandé), puis installe les dépendances :
+
+pip install -r requirements.txt
+
+2. Lancer le script principal: python main.py
+Ce script fait les étapes suivantes :
+
+Charge les données CIFAR-10.
+
+Entraîne le CNN.
+
+Teste le modèle sur des données de test.
+
+Affiche les métriques et une matrice de confusion.
+
+
+
+Local Testing: Avec Streamlit (plus personnalisable)
+
+Avantages :
+Très beau design.
+
+Contrôle total de l’interface.
+
+1. Installer streamlit: pip install streamlit
+2. creer le fichier app.py
+3. executer le fichier app avec streamlit: streamlit run app.py
+
+
+Staten app.py 
+
+Command:
+C:\Users\matth\DataScience\cnn_image_classifier2> C:\ProgramData\anaconda3\python.exe -m streamlit run app.py
+
+
+
+PS C:\Users\matth\DataScience\cnn_image_classifier2> C:\ProgramData\anaconda3\python.exe -m streamlit     
+Usage: streamlit [OPTIONS] COMMAND [ARGS]...
+
+  Try out a demo with:
+
+      $ streamlit hello
+
+  Or use the line below to run your own script:
+
+      $ streamlit run your_script.py
+
+Options:
+  --log_level [error|warning|info|debug]
+  --version                       Show the version and exit.
+  --help                          Show this message and exit.
+
+Commands:
+  activate  Activate Streamlit by entering your email.
+  cache     Manage the Streamlit cache.
+  config    Manage Streamlit's config settings.
+  docs      Show help in browser.
+  hello     Runs the Hello World script.
+  help      Print this help message.
+  run       Run a Python script, piping stderr to Streamlit.
+  version   Print Streamlit's version number.
+PS C:\Users\matth\DataScience\cnn_image_classifier2> 
+
+
+Déploiement possible
+streamlit.io/cloud (hébergement gratuit avec compte GitHub)
+
+Ajouter ton model_weights.h5 et ce projet dans un repo GitHub
+
+Streamlit Cloud détecte automatiquement app.py
